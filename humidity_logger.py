@@ -25,7 +25,7 @@ while True:
 		humidity = dht_device.humidity
 
 		#Write the data in the CSV report file
-		data = ('{0},{1},{2:0.1f}*C,{2:0.1f}*F,{3:0.1f}%\r\n'.format(time.strftime('%m/%d/%y'), time.strftime('%H:%M'), temperature_c, temperature_f, humidity))
+		data = ('{0},{1},{2:0.1f}*C,{3:0.1f}*F,{4:0.1f}%\r\n'.format(time.strftime('%m/%d/%y'), time.strftime('%H:%M'), temperature_c, temperature_f, humidity))
 		with open('/home/elifaulk/humidity.csv', 'a') as f:
 			f.write(data)
 		print(data)
@@ -34,3 +34,4 @@ while True:
 	
 	#Wait 5 minutes between each data collection
 	time.sleep(300.0)
+
